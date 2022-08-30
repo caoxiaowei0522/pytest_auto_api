@@ -1,15 +1,11 @@
-#-*- coding: utf-8 -*-
-#@File    : login.py
-#@Time    : 2021/11/8 21:56
-#@Author  : xintian
-#@Email   : 1730588479@qq.com
-#@Software: PyCharm
-#Date:2021/11/8
-HOST = 'http://121.41.14.39:8082'#'http://ip:port'
-NAME_PSW = {'username':'ka0518','password':'xintian'}
+
 import requests
 import hashlib
 import copy
+
+from config.config import HOST, NAME_PSW
+
+
 def login(inData):#登录接口需要做自动化测试 需要执行用例
     #1- url == http://ip:port/路径
     url = f'{HOST}/account/sLogin'
@@ -42,7 +38,7 @@ def get_md5_data(psw:str):
 if __name__ == '__main__':#ctrl+j
     res = login(NAME_PSW)
     print(res)
-    print(NAME_PSW)#TODO 下次课我们讲代码的一些技巧 ----2021-11-11
+    print(NAME_PSW)#
 
 
 
