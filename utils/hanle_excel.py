@@ -1,5 +1,4 @@
 import os
-
 import xlrd
 from utils.handle_path import testData_path
 def get_excel_data(excelDir,sheet_name):
